@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# personal planning + Claude Code config (no compartir)
+plan-portfolio-marca-personal.md
+.claude/
