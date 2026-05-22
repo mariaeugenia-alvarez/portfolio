@@ -26,3 +26,6 @@ pnpm-debug.log*
 # personal planning + Claude Code config (no compartir)
 plan-portfolio-marca-personal.md
 .claude/
+
+# OMC tooling state (ruido de sesión, no es contenido del portfolio)
+.omc/state/
