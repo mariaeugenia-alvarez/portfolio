@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Comparativa tipográfica — portfolio</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--ink: #1a1a1a;
+				--ink-soft: #4a4a4a;
+				--ink-mute: #8a8a8a;
+				--bg: #ffffff;
+				--block-sand: #f1ebde;
+				--block-sage: #e7ece4;
+				--accent: #c2410c;
+				--rule: #e3ddd0;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				background: var(--bg);
+				color: var(--ink);
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			body {
+				font-family: 'Inter', system-ui, sans-serif;
+				font-size: 17px;
+				line-height: 1.55;
+			}
+			.bar {
+				position: sticky;
+				top: 0;
+				z-index: 10;
+				background: rgba(255, 255, 255, 0.92);
+				backdrop-filter: blur(8px);
+				border-bottom: 1px solid var(--rule);
+				padding: 0.8rem 2rem;
+				font-size: 0.85rem;
+				color: var(--ink-mute);
+			}
+			.bar strong {
+				color: var(--ink);
+			}
+			.variant {
+				border-bottom: 1px solid var(--rule);
+			}
+			.variant-tag {
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.72rem;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: var(--ink-mute);
+				padding: 1.2rem 2.5rem 0;
+			}
+			.variant-tag span {
+				color: var(--accent);
+				margin-right: 0.6rem;
+			}
+			.row {
+				display: grid;
+				grid-template-columns: 1fr;
+				max-width: 1180px;
+				margin: 0 auto;
+				padding: 1.2rem 2.5rem 3.5rem;
+			}
+			.hero {
+				padding-top: 2rem;
+				padding-bottom: 3rem;
+			}
+			.block {
+				background: var(--block-sand);
+				margin: 0 -2.5rem;
+				padding: 2.5rem 2.5rem;
+				border-top: 1px solid var(--rule);
+				border-bottom: 1px solid var(--rule);
+			}
+			.cta {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding: 0.7rem 1.2rem;
+				background: var(--ink);
+				color: white;
+				text-decoration: none;
+				border-radius: 4px;
+				font-weight: 500;
+				font-size: 0.95rem;
+			}
+			.cta.ghost {
+				background: transparent;
+				color: var(--ink);
+				border: 1px solid var(--ink);
+			}
+			.cta-row {
+				display: flex;
+				gap: 0.7rem;
+				margin-top: 1.8rem;
+			}
+			.eyebrow {
+				font-size: 0.78rem;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: var(--ink-mute);
+				margin: 0 0 1.2rem;
+			}
+			h1 {
+				font-size: clamp(2.4rem, 5vw, 3.6rem);
+				line-height: 1.08;
+				letter-spacing: -0.02em;
+				margin: 0 0 1.2rem;
+				max-width: 18ch;
+			}
+			.lead {
+				font-size: 1.18rem;
+				line-height: 1.55;
+				color: var(--ink-soft);
+				max-width: 56ch;
+				margin: 0;
+			}
+			.block h2 {
+				font-size: 1.55rem;
+				margin: 0 0 0.6rem;
+				line-height: 1.2;
+			}
+			.block p {
+				margin: 0;
+				color: var(--ink-soft);
+				max-width: 58ch;
+			}
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin-top: 1.4rem;
+				list-style: none;
+				padding: 0;
+			}
+			.tags li {
+				padding: 0.35rem 0.75rem;
+				border: 1px solid var(--rule);
+				border-radius: 999px;
+				font-size: 0.85rem;
+				background: rgba(255, 255, 255, 0.6);
+			}
+
+			/* ============ VARIANT A: Sans clean en todo ============ */
+			.va h1,
+			.va h2,
+			.va .lead,
+			.va .eyebrow,
+			.va p {
+				font-family: 'Inter', system-ui, sans-serif;
+			}
+			.va h1 {
+				font-weight: 700;
+			}
+			.va h2 {
+				font-weight: 600;
+			}
+			.va .eyebrow {
+				font-weight: 500;
+			}
+			.va .tags li {
+				font-family: 'Inter', system-ui, sans-serif;
+			}
+
+			/* ============ VARIANT B: Sans + display serif para acentos ============ */
+			.vb h1 {
+				font-family: 'Inter', system-ui, sans-serif;
+				font-weight: 600;
+				letter-spacing: -0.025em;
+			}
+			.vb h1 .accent {
+				font-family: 'Fraunces', Georgia, serif;
+				font-weight: 500;
+				font-style: italic;
+				font-variation-settings: 'opsz' 144;
+				letter-spacing: -0.01em;
+			}
+			.vb h2 {
+				font-family: 'Fraunces', Georgia, serif;
+				font-weight: 500;
+				font-variation-settings: 'opsz' 72;
+				letter-spacing: -0.01em;
+			}
+			.vb .eyebrow,
+			.vb .lead,
+			.vb p,
+			.vb .tags li {
+				font-family: 'Inter', system-ui, sans-serif;
+			}
+
+			/* ============ VARIANT C: Sans + mono para detalles técnicos ============ */
+			.vc h1,
+			.vc h2 {
+				font-family: 'Inter', system-ui, sans-serif;
+				font-weight: 700;
+				letter-spacing: -0.022em;
+			}
+			.vc .lead,
+			.vc p {
+				font-family: 'Inter', system-ui, sans-serif;
+			}
+			.vc .eyebrow {
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.75rem;
+				font-weight: 500;
+				text-transform: none;
+				letter-spacing: 0.02em;
+				color: var(--ink-mute);
+			}
+			.vc .eyebrow::before {
+				content: '> ';
+				color: var(--accent);
+			}
+			.vc .tags li {
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.78rem;
+				text-transform: lowercase;
+				letter-spacing: 0;
+			}
+			.vc .meta-strip {
+				display: flex;
+				gap: 1.4rem;
+				margin-top: 1.6rem;
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.78rem;
+				color: var(--ink-mute);
+			}
+			.vc .meta-strip span strong {
+				color: var(--ink);
+				font-weight: 500;
+			}
+
+			@media (max-width: 720px) {
+				.row,
+				.variant-tag {
+					padding-left: 1.4rem;
+					padding-right: 1.4rem;
+				}
+				.block {
+					margin: 0 -1.4rem;
+					padding-left: 1.4rem;
+					padding-right: 1.4rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bar">
+			<strong>Comparativa tipográfica</strong> — mismo contenido, tres personalidades. Decide cuál encaja mejor con tu posicionamiento.
+		</div>
+
+		<!-- ============================================================
+		     VARIANT A — Sans clean en todo (Inter)
+		     ============================================================ -->
+		<section class="variant va">
+			<div class="variant-tag"><span>Variante A</span> Sans clean en todo · Inter</div>
+			<div class="row hero">
+				<p class="eyebrow">Maru — Ingeniera de sistemas</p>
+				<h1>Lo que no cambia en los sistemas complejos.</h1>
+				<p class="lead">
+					Aplico mentalidad lean a la ingeniería de IA: hacer fiables modelos,
+					datos y procesos cuando todo lo demás cambia.
+				</p>
+				<div class="cta-row">
+					<a class="cta" href="#">Ver proyectos →</a>
+					<a class="cta ghost" href="#">Contacto</a>
+				</div>
+			</div>
+			<div class="block">
+				<div class="row" style="padding-top: 0; padding-bottom: 0;">
+					<h2>Approach</h2>
+					<p>
+						Lean no es eficiencia: es eliminar variabilidad y desperdicio del
+						sistema. Lo mismo aplica a un pipeline de datos, a un modelo en
+						producción o a un equipo. Ese es el hilo que conecta mis proyectos.
+					</p>
+					<ul class="tags">
+						<li>Python</li>
+						<li>PyTorch</li>
+						<li>LLMs / RAG</li>
+						<li>MLOps</li>
+						<li>Lean</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		     VARIANT B — Sans + display serif para acentos (Inter + Fraunces)
+		     ============================================================ -->
+		<section class="variant vb">
+			<div class="variant-tag"><span>Variante B</span> Sans + serif editorial · Inter + Fraunces</div>
+			<div class="row hero">
+				<p class="eyebrow">Maru — Ingeniera de sistemas</p>
+				<h1>
+					Lo que <span class="accent">no cambia</span> en los sistemas
+					complejos.
+				</h1>
+				<p class="lead">
+					Aplico mentalidad lean a la ingeniería de IA: hacer fiables modelos,
+					datos y procesos cuando todo lo demás cambia.
+				</p>
+				<div class="cta-row">
+					<a class="cta" href="#">Ver proyectos →</a>
+					<a class="cta ghost" href="#">Contacto</a>
+				</div>
+			</div>
+			<div class="block">
+				<div class="row" style="padding-top: 0; padding-bottom: 0;">
+					<h2>Approach</h2>
+					<p>
+						Lean no es eficiencia: es eliminar variabilidad y desperdicio del
+						sistema. Lo mismo aplica a un pipeline de datos, a un modelo en
+						producción o a un equipo. Ese es el hilo que conecta mis proyectos.
+					</p>
+					<ul class="tags">
+						<li>Python</li>
+						<li>PyTorch</li>
+						<li>LLMs / RAG</li>
+						<li>MLOps</li>
+						<li>Lean</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		     VARIANT C — Sans + mono para detalles técnicos (Inter + JetBrains Mono)
+		     ============================================================ -->
+		<section class="variant vc">
+			<div class="variant-tag"><span>Variante C</span> Sans + mono técnica · Inter + JetBrains Mono</div>
+			<div class="row hero">
+				<p class="eyebrow">maru/ingeniera-de-sistemas</p>
+				<h1>Lo que no cambia en los sistemas complejos.</h1>
+				<p class="lead">
+					Aplico mentalidad lean a la ingeniería de IA: hacer fiables modelos,
+					datos y procesos cuando todo lo demás cambia.
+				</p>
+				<div class="meta-strip">
+					<span><strong>Base</strong> Madrid</span>
+					<span><strong>Stack</strong> python, pytorch, llms</span>
+					<span><strong>Status</strong> open to roles</span>
+				</div>
+				<div class="cta-row">
+					<a class="cta" href="#">Ver proyectos →</a>
+					<a class="cta ghost" href="#">Contacto</a>
+				</div>
+			</div>
+			<div class="block">
+				<div class="row" style="padding-top: 0; padding-bottom: 0;">
+					<h2>Approach</h2>
+					<p>
+						Lean no es eficiencia: es eliminar variabilidad y desperdicio del
+						sistema. Lo mismo aplica a un pipeline de datos, a un modelo en
+						producción o a un equipo. Ese es el hilo que conecta mis proyectos.
+					</p>
+					<ul class="tags">
+						<li>python</li>
+						<li>pytorch</li>
+						<li>llms / rag</li>
+						<li>mlops</li>
+						<li>lean</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

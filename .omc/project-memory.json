@@ -1,0 +1,214 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779439704515,
+  "projectRoot": "/Users/maru/Code/portfolio",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": ">=22.12.0",
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "astro",
+        "version": "6.2.2",
+        "category": "fullstack"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": "Node.js 22.12.0"
+  },
+  "build": {
+    "buildCommand": "npm run build 2>&1 | tail -15",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "astro dev",
+      "build": "astro build",
+      "preview": "astro preview",
+      "astro": "astro"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": "ES modules",
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "src"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 6,
+      "lastAccessed": 1779439704489,
+      "keyFiles": [
+        "favicon.ico",
+        "favicon.svg",
+        "index.html",
+        "rss.xml",
+        "sitemap-0.xml"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 2,
+      "lastAccessed": 1779439704490,
+      "keyFiles": [
+        "favicon.ico",
+        "favicon.svg"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1779439704500,
+      "keyFiles": [
+        "consts.ts",
+        "content.config.ts"
+      ]
+    },
+    "src/assets": {
+      "path": "src/assets",
+      "purpose": "Static assets",
+      "fileCount": 6,
+      "lastAccessed": 1779439704503,
+      "keyFiles": [
+        "blog-placeholder-1.jpg",
+        "blog-placeholder-2.jpg",
+        "blog-placeholder-3.jpg"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 5,
+      "lastAccessed": 1779439704503,
+      "keyFiles": [
+        "BaseHead.astro",
+        "Footer.astro",
+        "FormattedDate.astro"
+      ]
+    },
+    "src/pages": {
+      "path": "src/pages",
+      "purpose": "Page components",
+      "fileCount": 3,
+      "lastAccessed": 1779439704504,
+      "keyFiles": [
+        "about.astro",
+        "index.astro",
+        "rss.xml.js"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/pages/index.astro",
+      "accessCount": 5,
+      "lastAccessed": 1779461601967,
+      "type": "file"
+    },
+    {
+      "path": "src/consts.ts",
+      "accessCount": 3,
+      "lastAccessed": 1779442884529,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Header.astro",
+      "accessCount": 2,
+      "lastAccessed": 1779440799568,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Footer.astro",
+      "accessCount": 2,
+      "lastAccessed": 1779440800834,
+      "type": "file"
+    },
+    {
+      "path": "public/preview-colors-pastel.html",
+      "accessCount": 2,
+      "lastAccessed": 1779463205089,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1779439933111,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1779439934123,
+      "type": "file"
+    },
+    {
+      "path": "plan-portfolio-marca-personal.md",
+      "accessCount": 1,
+      "lastAccessed": 1779439934666,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/about.astro",
+      "accessCount": 1,
+      "lastAccessed": 1779439940818,
+      "type": "file"
+    },
+    {
+      "path": "astro.config.mjs",
+      "accessCount": 1,
+      "lastAccessed": 1779439941330,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1779442705698,
+      "type": "directory"
+    },
+    {
+      "path": "public/preview-typography.html",
+      "accessCount": 1,
+      "lastAccessed": 1779461728968,
+      "type": "file"
+    },
+    {
+      "path": "public/preview-hero.html",
+      "accessCount": 1,
+      "lastAccessed": 1779462690557,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

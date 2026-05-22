@@ -1,0 +1,101 @@
+{
+  "updatedAt": "2026-05-22T14:56:55.789Z",
+  "missions": [
+    {
+      "id": "session:ce1ea700-cd36-4110-91a9-5e2d1859e0db:none",
+      "source": "session",
+      "name": "none",
+      "objective": "Session mission",
+      "createdAt": "2026-05-22T09:17:43.589Z",
+      "updatedAt": "2026-05-22T14:56:55.789Z",
+      "status": "done",
+      "workerCount": 1,
+      "taskCounts": {
+        "total": 1,
+        "pending": 0,
+        "blocked": 0,
+        "inProgress": 0,
+        "completed": 1,
+        "failed": 0
+      },
+      "agents": [
+        {
+          "name": "arquitecto-proyectos-ia:a5cfe9f",
+          "role": "arquitecto-proyectos-ia",
+          "ownership": "a5cfe9f5c7734f780",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-05-22T14:56:55.789Z"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "session-stop:a5cfe9f5c7734f780:2026-05-22T09:19:16.004Z",
+          "at": "2026-05-22T09:19:16.004Z",
+          "kind": "completion",
+          "agent": "arquitecto-proyectos-ia:a5cfe9f",
+          "detail": "completed",
+          "sourceKey": "session-stop:a5cfe9f5c7734f780"
+        },
+        {
+          "id": "session-stop:a43bdf73c85fb2307:2026-05-22T09:31:51.514Z",
+          "at": "2026-05-22T09:31:51.514Z",
+          "kind": "completion",
+          "agent": "arquitecto-proyectos-ia:a5cfe9f",
+          "detail": "completed",
+          "sourceKey": "session-stop:a43bdf73c85fb2307"
+        },
+        {
+          "id": "session-start:a5cfe9f5c7734f780:2026-05-22T09:38:05.423Z",
+          "at": "2026-05-22T09:38:05.423Z",
+          "kind": "update",
+          "agent": "arquitecto-proyectos-ia:a5cfe9f",
+          "detail": "started arquitecto-proyectos-ia:a5cfe9f",
+          "sourceKey": "session-start:a5cfe9f5c7734f780"
+        },
+        {
+          "id": "session-stop:a5cfe9f5c7734f780:2026-05-22T09:39:51.775Z",
+          "at": "2026-05-22T09:39:51.775Z",
+          "kind": "completion",
+          "agent": "arquitecto-proyectos-ia:a5cfe9f",
+          "detail": "completed",
+          "sourceKey": "session-stop:a5cfe9f5c7734f780"
+        },
+        {
+          "id": "session-stop:a0413ef60d7df77b8:2026-05-22T10:08:05.744Z",
+          "at": "2026-05-22T10:08:05.744Z",
+          "kind": "completion",
+          "agent": "arquitecto-proyectos-ia:a5cfe9f",
+          "detail": "completed",
+          "sourceKey": "session-stop:a0413ef60d7df77b8"
+        },
+        {
+          "id": "session-stop:a318ea084dc456dd0:2026-05-22T10:30:59.388Z",
+          "at": "2026-05-22T10:30:59.388Z",
+          "kind": "completion",
+          "agent": "arquitecto-proyectos-ia:a5cfe9f",
+          "detail": "completed",
+          "sourceKey": "session-stop:a318ea084dc456dd0"
+        },
+        {
+          "id": "session-stop:a5c4d170b049c2db3:2026-05-22T14:53:35.569Z",
+          "at": "2026-05-22T14:53:35.569Z",
+          "kind": "completion",
+          "agent": "arquitecto-proyectos-ia:a5cfe9f",
+          "detail": "completed",
+          "sourceKey": "session-stop:a5c4d170b049c2db3"
+        },
+        {
+          "id": "session-stop:a88d6ba2aabc916e3:2026-05-22T14:56:55.789Z",
+          "at": "2026-05-22T14:56:55.789Z",
+          "kind": "completion",
+          "agent": "arquitecto-proyectos-ia:a5cfe9f",
+          "detail": "completed",
+          "sourceKey": "session-stop:a88d6ba2aabc916e3"
+        }
+      ]
+    }
+  ]
+}

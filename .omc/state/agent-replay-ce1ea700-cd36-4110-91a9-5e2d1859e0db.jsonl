@@ -1,0 +1,15 @@
+{"t":0,"agent":"a0621b5","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a443a9e","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a245cbe","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"aa84dec","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"ab6a3b4","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a8170a6","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a5cfe9f","agent_type":"arquitecto-proyectos-ia","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"a5cfe9f","agent_type":"arquitecto-proyectos-ia","event":"agent_stop","success":true,"duration_ms":92415}
+{"t":0,"agent":"a43bdf7","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a5cfe9f","agent_type":"arquitecto-proyectos-ia","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"a5cfe9f","agent_type":"arquitecto-proyectos-ia","event":"agent_stop","success":true,"duration_ms":106352}
+{"t":0,"agent":"a0413ef","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a318ea0","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a5c4d17","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a88d6ba","agent_type":"unknown","event":"agent_stop","success":true}

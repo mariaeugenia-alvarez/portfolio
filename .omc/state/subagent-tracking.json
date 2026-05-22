@@ -1,0 +1,17 @@
+{
+  "agents": [
+    {
+      "agent_id": "a5cfe9f5c7734f780",
+      "agent_type": "arquitecto-proyectos-ia",
+      "started_at": "2026-05-22T09:38:05.423Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-05-22T09:39:51.775Z",
+      "duration_ms": 106352
+    }
+  ],
+  "total_spawned": 2,
+  "total_completed": 2,
+  "total_failed": 0,
+  "last_updated": "2026-05-22T15:20:50.052Z"
+}

@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Comparativa color — paletas pastel en degradado</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--ink: #1a1a1a;
+				--ink-soft: #4a4a4a;
+				--ink-mute: #8a8a8a;
+				--rule: #e3ddd0;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				background: #fff;
+				color: var(--ink);
+				-webkit-font-smoothing: antialiased;
+			}
+			body {
+				font-family: 'Inter', system-ui, sans-serif;
+				font-size: 17px;
+				line-height: 1.55;
+			}
+			.bar {
+				position: sticky;
+				top: 0;
+				z-index: 10;
+				background: rgba(255, 255, 255, 0.93);
+				backdrop-filter: blur(8px);
+				border-bottom: 1px solid var(--rule);
+				padding: 0.8rem 2rem;
+				font-size: 0.85rem;
+				color: var(--ink-mute);
+			}
+			.bar strong {
+				color: var(--ink);
+			}
+			.variant {
+				border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+				position: relative;
+			}
+			.variant-tag {
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.72rem;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: var(--ink-mute);
+				max-width: 1180px;
+				margin: 0 auto;
+				padding: 1.6rem 2.5rem 0;
+			}
+			.variant-tag span.tag-num {
+				color: var(--accent);
+				margin-right: 0.6rem;
+			}
+			.swatches {
+				display: inline-flex;
+				gap: 0.3rem;
+				margin-left: 1rem;
+				vertical-align: middle;
+			}
+			.swatches span {
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				display: inline-block;
+			}
+
+			.hero {
+				max-width: 1180px;
+				margin: 0 auto;
+				padding: 1rem 2.5rem 2.5rem;
+				display: grid;
+				grid-template-columns: 1.1fr 0.9fr;
+				gap: 3rem;
+				align-items: center;
+			}
+			.eyebrow {
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.75rem;
+				color: var(--ink-mute);
+				margin: 0 0 1.2rem;
+			}
+			.eyebrow::before {
+				content: '> ';
+				color: var(--accent);
+			}
+			h1 {
+				font-size: clamp(2.2rem, 4vw, 3.2rem);
+				line-height: 1.08;
+				letter-spacing: -0.022em;
+				margin: 0 0 1.2rem;
+				font-weight: 700;
+			}
+			.lead {
+				font-size: 1.12rem;
+				color: var(--ink-soft);
+				margin: 0;
+			}
+			.meta-strip {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.2rem;
+				margin-top: 1.4rem;
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.76rem;
+				color: var(--ink-mute);
+			}
+			.meta-strip strong {
+				color: var(--ink);
+				font-weight: 500;
+			}
+			.cta-row {
+				display: flex;
+				gap: 0.7rem;
+				margin-top: 1.8rem;
+			}
+			.cta {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding: 0.7rem 1.2rem;
+				background: var(--ink);
+				color: white;
+				text-decoration: none;
+				border-radius: 4px;
+				font-weight: 500;
+				font-size: 0.95rem;
+			}
+			.cta.ghost {
+				background: transparent;
+				color: var(--ink);
+				border: 1px solid var(--ink);
+			}
+
+			/* dashboard card */
+			.dash {
+				background: white;
+				border: 1px solid var(--ink);
+				border-radius: 6px;
+				padding: 1rem 1.1rem;
+				width: 100%;
+				max-width: 320px;
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.78rem;
+				color: var(--ink);
+				box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+			}
+			.dash-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: var(--ink-mute);
+				font-size: 0.7rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				margin-bottom: 0.7rem;
+			}
+			.dash-head .live {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.4rem;
+				color: var(--accent);
+			}
+			.dash-head .live::before {
+				content: '';
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: var(--accent);
+			}
+			.dash .big {
+				font-family: 'Inter', sans-serif;
+				font-size: 2rem;
+				font-weight: 700;
+				line-height: 1;
+				margin: 0.2rem 0 0.1rem;
+				letter-spacing: -0.02em;
+			}
+			.dash .unit {
+				color: var(--ink-mute);
+				font-size: 0.72rem;
+			}
+			.spark {
+				display: block;
+				margin: 0.6rem 0 0.8rem;
+				width: 100%;
+				height: 36px;
+			}
+			.dash .row {
+				display: flex;
+				justify-content: space-between;
+				padding: 0.3rem 0;
+				border-top: 1px solid var(--rule);
+				font-size: 0.74rem;
+			}
+			.dash .row .ok {
+				color: #15803d;
+			}
+			.dash .row .warn {
+				color: var(--accent);
+			}
+
+			/* approach block — where the gradient lives */
+			.block {
+				background: var(--block-gradient);
+				padding: 3rem 0;
+			}
+			.block-inner {
+				max-width: 1180px;
+				margin: 0 auto;
+				padding: 0 2.5rem;
+			}
+			.block h2 {
+				font-size: 1.6rem;
+				margin: 0 0 0.6rem;
+			}
+			.block p {
+				margin: 0;
+				color: var(--ink-soft);
+				max-width: 58ch;
+			}
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin-top: 1.4rem;
+				list-style: none;
+				padding: 0;
+			}
+			.tags li {
+				padding: 0.35rem 0.75rem;
+				border: 1px solid rgba(0, 0, 0, 0.18);
+				border-radius: 999px;
+				font-size: 0.85rem;
+				background: rgba(255, 255, 255, 0.55);
+				font-family: 'JetBrains Mono', monospace;
+				font-size: 0.78rem;
+				text-transform: lowercase;
+			}
+
+			/* very subtle wash on hero top so the palette is felt before the block */
+			.hero-wrap {
+				background: var(--hero-wash);
+			}
+
+			/* ============ palette 1: peach / coral (warm editorial) ============ */
+			.p1 {
+				--accent: #c2410c;
+				--hero-wash: linear-gradient(180deg, #fff7ed 0%, #ffffff 60%);
+				--block-gradient: linear-gradient(135deg, #fff7ed 0%, #ffedd5 45%, #fed7aa 100%);
+			}
+			.p1 .s1 { background: #fed7aa; }
+			.p1 .s2 { background: #ffedd5; }
+			.p1 .s3 { background: #fff7ed; }
+			.p1 .s4 { background: #c2410c; }
+
+			/* ============ palette 2: sky / iris / lavender (soft tech) ============ */
+			.p2 {
+				--accent: #4f46e5;
+				--hero-wash: linear-gradient(180deg, #eff6ff 0%, #ffffff 60%);
+				--block-gradient: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 45%, #e9d5ff 100%);
+			}
+			.p2 .s1 { background: #e9d5ff; }
+			.p2 .s2 { background: #e0e7ff; }
+			.p2 .s3 { background: #eff6ff; }
+			.p2 .s4 { background: #4f46e5; }
+
+			/* ============ palette 3: sage / mint / cream (lean natural) ============ */
+			.p3 {
+				--accent: #166534;
+				--hero-wash: linear-gradient(180deg, #f0fdf4 0%, #ffffff 60%);
+				--block-gradient: linear-gradient(135deg, #fefce8 0%, #ecfccb 45%, #d1fae5 100%);
+			}
+			.p3 .s1 { background: #d1fae5; }
+			.p3 .s2 { background: #ecfccb; }
+			.p3 .s3 { background: #fefce8; }
+			.p3 .s4 { background: #166534; }
+
+			/* ============ palette 4: sunset (cream → peach → pink) ============ */
+			.p4 {
+				--accent: #be185d;
+				--hero-wash: linear-gradient(180deg, #fef9c3 0%, #ffffff 70%);
+				--block-gradient: linear-gradient(135deg, #fef9c3 0%, #fed7aa 50%, #fbcfe8 100%);
+			}
+			.p4 .s1 { background: #fbcfe8; }
+			.p4 .s2 { background: #fed7aa; }
+			.p4 .s3 { background: #fef9c3; }
+			.p4 .s4 { background: #be185d; }
+
+			/* ============ palette 5: dusty rose / clay (warm muted) ============ */
+			.p5 {
+				--accent: #9f1239;
+				--hero-wash: linear-gradient(180deg, #fef2f2 0%, #ffffff 60%);
+				--block-gradient: linear-gradient(135deg, #fef2f2 0%, #fce7f3 45%, #fde68a 100%);
+			}
+			.p5 .s1 { background: #fde68a; }
+			.p5 .s2 { background: #fce7f3; }
+			.p5 .s3 { background: #fef2f2; }
+			.p5 .s4 { background: #9f1239; }
+
+			@media (max-width: 820px) {
+				.hero {
+					grid-template-columns: 1fr;
+					padding: 1rem 1.4rem 2.5rem;
+					gap: 1.5rem;
+				}
+				.variant-tag,
+				.block-inner {
+					padding-left: 1.4rem;
+					padding-right: 1.4rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bar">
+			<strong>Comparativa de color</strong> — paletas pastel en degradado, mismo dashboard. Cada variante muestra el degradado en el bloque "Approach" + un wash sutil sobre el hero.
+		</div>
+
+		<!-- ============ PALETTE 1: Peach / coral ============ -->
+		<section class="variant p1">
+			<div class="variant-tag">
+				<span class="tag-num">Paleta 1</span> Melocotón / coral · cálida editorial
+				<span class="swatches"><span class="s3"></span><span class="s2"></span><span class="s1"></span><span class="s4"></span></span>
+			</div>
+			<div class="hero-wrap">
+				<div class="hero">
+					<div>
+						<p class="eyebrow">maru/ingeniera-de-sistemas</p>
+						<h1>Lo que no cambia en los sistemas complejos.</h1>
+						<p class="lead">
+							Aplico mentalidad lean a la ingeniería de IA: hacer fiables modelos,
+							datos y procesos cuando todo lo demás cambia.
+						</p>
+						<div class="meta-strip">
+							<span><strong>Base</strong> Madrid</span>
+							<span><strong>Stack</strong> python, pytorch, llms</span>
+						</div>
+						<div class="cta-row">
+							<a class="cta" href="#">Ver proyectos →</a>
+							<a class="cta ghost" href="#">Contacto</a>
+						</div>
+					</div>
+					<div>
+						<div class="dash">
+							<div class="dash-head"><span>rag-v2.3 · p95</span><span class="live">live</span></div>
+							<div class="big">247<span style="font-size: 1rem; color: var(--ink-mute);">ms</span></div>
+							<div class="unit">last 24h</div>
+							<svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none">
+								<polyline points="0,28 18,24 36,26 54,20 72,22 90,16 108,18 126,12 144,14 162,8 180,11 200,6" fill="none" stroke="var(--accent)" stroke-width="1.6" />
+							</svg>
+							<div class="row"><span>ingest</span><span class="ok">ok</span></div>
+							<div class="row"><span>embed</span><span class="ok">ok</span></div>
+							<div class="row"><span>rerank</span><span class="warn">degraded</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<div class="block-inner">
+					<h2>Approach</h2>
+					<p>Lean no es eficiencia: es eliminar variabilidad y desperdicio del sistema. Lo mismo aplica a un pipeline de datos, a un modelo en producción o a un equipo. Ese es el hilo que conecta mis proyectos.</p>
+					<ul class="tags"><li>python</li><li>pytorch</li><li>llms / rag</li><li>mlops</li><li>lean</li></ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ PALETTE 2: Sky / iris / lavender ============ -->
+		<section class="variant p2">
+			<div class="variant-tag">
+				<span class="tag-num">Paleta 2</span> Cielo / iris / lavanda · soft tech
+				<span class="swatches"><span class="s3"></span><span class="s2"></span><span class="s1"></span><span class="s4"></span></span>
+			</div>
+			<div class="hero-wrap">
+				<div class="hero">
+					<div>
+						<p class="eyebrow">maru/ingeniera-de-sistemas</p>
+						<h1>Lo que no cambia en los sistemas complejos.</h1>
+						<p class="lead">
+							Aplico mentalidad lean a la ingeniería de IA: hacer fiables modelos,
+							datos y procesos cuando todo lo demás cambia.
+						</p>
+						<div class="meta-strip">
+							<span><strong>Base</strong> Madrid</span>
+							<span><strong>Stack</strong> python, pytorch, llms</span>
+						</div>
+						<div class="cta-row">
+							<a class="cta" href="#">Ver proyectos →</a>
+							<a class="cta ghost" href="#">Contacto</a>
+						</div>
+					</div>
+					<div>
+						<div class="dash">
+							<div class="dash-head"><span>rag-v2.3 · p95</span><span class="live">live</span></div>
+							<div class="big">247<span style="font-size: 1rem; color: var(--ink-mute);">ms</span></div>
+							<div class="unit">last 24h</div>
+							<svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none">
+								<polyline points="0,28 18,24 36,26 54,20 72,22 90,16 108,18 126,12 144,14 162,8 180,11 200,6" fill="none" stroke="var(--accent)" stroke-width="1.6" />
+							</svg>
+							<div class="row"><span>ingest</span><span class="ok">ok</span></div>
+							<div class="row"><span>embed</span><span class="ok">ok</span></div>
+							<div class="row"><span>rerank</span><span class="warn">degraded</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<div class="block-inner">
+					<h2>Approach</h2>
+					<p>Lean no es eficiencia: es eliminar variabilidad y desperdicio del sistema. Lo mismo aplica a un pipeline de datos, a un modelo en producción o a un equipo. Ese es el hilo que conecta mis proyectos.</p>
+					<ul class="tags"><li>python</li><li>pytorch</li><li>llms / rag</li><li>mlops</li><li>lean</li></ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ PALETTE 3: Sage / mint / cream ============ -->
+		<section class="variant p3">
+			<div class="variant-tag">
+				<span class="tag-num">Paleta 3</span> Salvia / menta / crema · lean natural
+				<span class="swatches"><span class="s3"></span><span class="s2"></span><span class="s1"></span><span class="s4"></span></span>
+			</div>
+			<div class="hero-wrap">
+				<div class="hero">
+					<div>
+						<p class="eyebrow">maru/ingeniera-de-sistemas</p>
+						<h1>Lo que no cambia en los sistemas complejos.</h1>
+						<p class="lead">
+							Aplico mentalidad lean a la ingeniería de IA: hacer fiables modelos,
+							datos y procesos cuando todo lo demás cambia.
+						</p>
+						<div class="meta-strip">
+							<span><strong>Base</strong> Madrid</span>
+							<span><strong>Stack</strong> python, pytorch, llms</span>
+						</div>
+						<div class="cta-row">
+							<a class="cta" href="#">Ver proyectos →</a>
+							<a class="cta ghost" href="#">Contacto</a>
+						</div>
+					</div>
+					<div>
+						<div class="dash">
+							<div class="dash-head"><span>rag-v2.3 · p95</span><span class="live">live</span></div>
+							<div class="big">247<span style="font-size: 1rem; color: var(--ink-mute);">ms</span></div>
+							<div class="unit">last 24h</div>
+							<svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none">
+								<polyline points="0,28 18,24 36,26 54,20 72,22 90,16 108,18 126,12 144,14 162,8 180,11 200,6" fill="none" stroke="var(--accent)" stroke-width="1.6" />
+							</svg>
+							<div class="row"><span>ingest</span><span class="ok">ok</span></div>
+							<div class="row"><span>embed</span><span class="ok">ok</span></div>
+							<div class="row"><span>rerank</span><span class="warn">degraded</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<div class="block-inner">
+					<h2>Approach</h2>
+					<p>Lean no es eficiencia: es eliminar variabilidad y desperdicio del sistema. Lo mismo aplica a un pipeline de datos, a un modelo en producción o a un equipo. Ese es el hilo que conecta mis proyectos.</p>
+					<ul class="tags"><li>python</li><li>pytorch</li><li>llms / rag</li><li>mlops</li><li>lean</li></ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ PALETTE 4: Sunset (cream → peach → pink) ============ -->
+		<section class="variant p4">
+			<div class="variant-tag">
+				<span class="tag-num">Paleta 4</span> Atardecer · crema → melocotón → rosa
+				<span class="swatches"><span class="s3"></span><span class="s2"></span><span class="s1"></span><span class="s4"></span></span>
+			</div>
+			<div class="hero-wrap">
+				<div class="hero">
+					<div>
+						<p class="eyebrow">maru/ingeniera-de-sistemas</p>
+						<h1>Lo que no cambia en los sistemas complejos.</h1>
+						<p class="lead">
+							Aplico mentalidad lean a la ingeniería de IA: hacer fiables modelos,
+							datos y procesos cuando todo lo demás cambia.
+						</p>
+						<div class="meta-strip">
+							<span><strong>Base</strong> Madrid</span>
+							<span><strong>Stack</strong> python, pytorch, llms</span>
+						</div>
+						<div class="cta-row">
+							<a class="cta" href="#">Ver proyectos →</a>
+							<a class="cta ghost" href="#">Contacto</a>
+						</div>
+					</div>
+					<div>
+						<div class="dash">
+							<div class="dash-head"><span>rag-v2.3 · p95</span><span class="live">live</span></div>
+							<div class="big">247<span style="font-size: 1rem; color: var(--ink-mute);">ms</span></div>
+							<div class="unit">last 24h</div>
+							<svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none">
+								<polyline points="0,28 18,24 36,26 54,20 72,22 90,16 108,18 126,12 144,14 162,8 180,11 200,6" fill="none" stroke="var(--accent)" stroke-width="1.6" />
+							</svg>
+							<div class="row"><span>ingest</span><span class="ok">ok</span></div>
+							<div class="row"><span>embed</span><span class="ok">ok</span></div>
+							<div class="row"><span>rerank</span><span class="warn">degraded</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<div class="block-inner">
+					<h2>Approach</h2>
+					<p>Lean no es eficiencia: es eliminar variabilidad y desperdicio del sistema. Lo mismo aplica a un pipeline de datos, a un modelo en producción o a un equipo. Ese es el hilo que conecta mis proyectos.</p>
+					<ul class="tags"><li>python</li><li>pytorch</li><li>llms / rag</li><li>mlops</li><li>lean</li></ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ PALETTE 5: Dusty rose / clay ============ -->
+		<section class="variant p5">
+			<div class="variant-tag">
+				<span class="tag-num">Paleta 5</span> Rosa polvo / arcilla · cálida apagada
+				<span class="swatches"><span class="s3"></span><span class="s2"></span><span class="s1"></span><span class="s4"></span></span>
+			</div>
+			<div class="hero-wrap">
+				<div class="hero">
+					<div>
+						<p class="eyebrow">maru/ingeniera-de-sistemas</p>
+						<h1>Lo que no cambia en los sistemas complejos.</h1>
+						<p class="lead">
+							Aplico mentalidad lean a la ingeniería de IA: hacer fiables modelos,
+							datos y procesos cuando todo lo demás cambia.
+						</p>
+						<div class="meta-strip">
+							<span><strong>Base</strong> Madrid</span>
+							<span><strong>Stack</strong> python, pytorch, llms</span>
+						</div>
+						<div class="cta-row">
+							<a class="cta" href="#">Ver proyectos →</a>
+							<a class="cta ghost" href="#">Contacto</a>
+						</div>
+					</div>
+					<div>
+						<div class="dash">
+							<div class="dash-head"><span>rag-v2.3 · p95</span><span class="live">live</span></div>
+							<div class="big">247<span style="font-size: 1rem; color: var(--ink-mute);">ms</span></div>
+							<div class="unit">last 24h</div>
+							<svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none">
+								<polyline points="0,28 18,24 36,26 54,20 72,22 90,16 108,18 126,12 144,14 162,8 180,11 200,6" fill="none" stroke="var(--accent)" stroke-width="1.6" />
+							</svg>
+							<div class="row"><span>ingest</span><span class="ok">ok</span></div>
+							<div class="row"><span>embed</span><span class="ok">ok</span></div>
+							<div class="row"><span>rerank</span><span class="warn">degraded</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<div class="block-inner">
+					<h2>Approach</h2>
+					<p>Lean no es eficiencia: es eliminar variabilidad y desperdicio del sistema. Lo mismo aplica a un pipeline de datos, a un modelo en producción o a un equipo. Ese es el hilo que conecta mis proyectos.</p>
+					<ul class="tags"><li>python</li><li>pytorch</li><li>llms / rag</li><li>mlops</li><li>lean</li></ul>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
